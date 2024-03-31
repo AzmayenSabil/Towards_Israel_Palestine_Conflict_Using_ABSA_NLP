@@ -1,0 +1,5 @@
+Link_1: On ABSA >> https://github.com/navreeetkaur/aspect-based-sentiment-analysis
+Link_2: Towards Arabic aspect-based sentiment analysis >> https://www.researchgate.net/publication/356775091_Towards_Arabic_aspect-based_sentiment_analysis_a_transfer_learning-based_approach
+Link_3: Framework for Affective News Analysis of Arabic News >> https://www.researchgate.net/publication/316658146_Framework_for_Affective_News_Analysis_of_Arabic_News_2014_Gaza_Attacks_Case_Study
+							     >> https://github.com/malayyoub/ABSA-for-Affective-News-Analysis-
+							     >> https://ieeexplore.ieee.org/abstract/document/7476073
