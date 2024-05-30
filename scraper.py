@@ -15,12 +15,30 @@ def fetch_posts_and_comments(subreddit_name):
     total_posts_fetched = 0
     rows_added_to_csv = 0
 
-    with open('reddit_data_2.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('Test_Unlabelled_Sentiment_Ukr_Rus.csv', 'w', newline='', encoding='utf-8') as csvfile:
         fieldnames = ['post_id', 'post_title', 'comment_id', 'comment']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for submission in subreddit.hot(limit=20):  # Adjust limit as needed
+        # for submission in subreddit.hot(limit=20):  # Adjust limit as needed
+        #     total_posts_fetched += 1
+        #     post_id = submission.id
+        #     post_title = submission.title
+        #     submission.comments.replace_more(limit=None)
+        #     comment_count = 0
+        #     for comment in submission.comments.list():
+        #         if comment_count >= 12:
+        #             break
+        #         comment_id = comment.id
+        #         comment_body = comment.body
+        #         writer.writerow(
+        #             {'post_id': post_id, 'post_title': post_title, 'comment_id': comment_id, 'comment': comment_body})
+        #         rows_added_to_csv += 1
+        #         comment_count += 1
+
+        for index, submission in enumerate(subreddit.hot(limit=41)):  # Start from the 21st post, limit to 41 (21 + 20)
+            if index < 20:  # Skip the first 20 posts
+                continue
             total_posts_fetched += 1
             post_id = submission.id
             post_title = submission.title
